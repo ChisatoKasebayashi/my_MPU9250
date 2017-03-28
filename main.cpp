@@ -38,6 +38,23 @@ int main(void)
 			{
 				printf("Sample rate %d: %s\r", sampleRate, RTMath::displayDegrees("", imuData.fusionPose));
 				fflush(stdout);
+				std::cout << "accel.x" << imu->getAccel().x() 
+					<< "  " << imu->getIMUData().accel.x() << std::endl;
+				std::cout << "accel.y" << imu->getAccel().y() 	
+					<< "  " << imu->getIMUData().accel.y() << std::endl;
+				std::cout << "accel.z" << imu->getAccel().z() 	
+					<< "  " << imu->getIMUData().accel.z() << std::endl;
+
+
+				std::cout << "gyro.x" << imu->getGyro().x() 
+					<< "  " << imu->getIMUData().gyro.x() << std::endl;
+				std::cout << "gyro.y" << imu->getGyro().y() 	
+					<< "  " << imu->getIMUData().gyro.y() << std::endl;
+				std::cout << "gyro.z" << imu->getGyro().z() 	
+					<< "  " << imu->getIMUData().gyro.z() << std::endl;
+
+
+
 				displayTimer = now;
 			}
 
